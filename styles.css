@@ -203,4 +203,24 @@
     grid-template-columns: 1fr;
   }
 }
+.plant-lover {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px;
+  flex-wrap: wrap;
+}
+.plant-lover-img {
+  flex: 1;
+}
+.plant-lover-content {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .plant-lover {
+    flex-direction: column;
+    text-align: left;
+  }
+}
 
