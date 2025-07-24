@@ -3,129 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Responsive Navbar</title>
+  <title>Lakuei Flower Market</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
-    <a href="#" class="logo"></a>
-
+    <a href="#" class="logo">Lakuei</a>
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#">Shop</a></li>
         <li><a href="#">About</a></li>
       </ul>
-
       <div class="cart" title="Cart">
-        🛒
+        <i class="fas fa-shopping-cart"></i>
         <span class="cart-badge">3</span>
       </div>
     </div>
   </nav>
-<section class="banner">
-  <div class="banner-content">
-    <h1>ALWAYS FRESH<br>FLOWERS</h1>
-    <p>Your paragraph here explaining something...</p>
-  </div>
-  <div class="banner-image">
-    <img src="hero-flower.png" alt="Banner Image">
-  </div>
-</section>
-<section class="plants-section">
-  <h2 class="section-title">Our Plants</h2>
-  <p class="section-subtitle">Choose from our best collection</p>
 
-  <div class="plant-grid">
-    <!-- Repeat card -->
-    <div class="plant-card">
-      <img src="plant1.jpg" alt="Aloe Vera" />
-      <div class="plant-info">
-        <h4>Aloe Vera</h4>
-        <p class="price">$12.00</p>
-        <button class="add-cart-btn">Add to Cart</button>
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>ALWAYS FRESH<br>FLOWERS</h1>
+      <p>Your paragraph here explaining something...</p>
+    </div>
+    <div class="banner-image">
+      <img src="hero-flower.png" alt="Banner Image">
+    </div>
+  </section>
+
+  <!-- Our Plants -->
+  <section class="plants-section">
+    <h2 class="section-title">Our Plants</h2>
+    <p class="section-subtitle">Choose from our best collection</p>
+    <div class="plant-grid">
+      <!-- Plant cards (8x) -->
+      <!-- Repeat these blocks as shown earlier -->
+    </div>
+  </section>
+
+  <!-- Why Lovers Love Us -->
+  <section class="plant-lover">
+    <div class="plant-lover-img">
+      <img src="plant-lover.jpg" alt="Plant Lover">
+    </div>
+    <div class="plant-lover-content">
+      <h2>Why Plant Lovers Love Us</h2>
+      <ul>
+        <li>Fast delivery</li>
+        <li>Top-quality plants</li>
+        <li>Eco packaging</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Latest Deals Section -->
+  <section class="latest-deals">
+    <h2 class="latest-title"><span class="highlight">Latest</span> Deals</h2>
+    <p class="latest-subtitle">Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</p>
+
+    <div class="deal-grid">
+      <div class="deal-left">
+        <div class="deal-card small">
+          <img src="deal1.jpg" alt="Bloom Plant">
+          <div class="deal-info">60% Off | Bloom Plant</div>
+        </div>
+        <div class="deal-card small">
+          <img src="deal2.jpg" alt="Aana Plant">
+          <div class="deal-info">50% Off | Aana Plant</div>
+        </div>
+      </div>
+      <div class="deal-card large">
+        <img src="deal3.jpg" alt="Zabo Plant">
+        <div class="deal-info">25% Off | Zabo Plant<br><span>Shop Now</span></div>
       </div>
     </div>
+  </section>
 
-    <div class="plant-card">
-      <img src="plant2.jpg" alt="Snake Plant" />
-      <div class="plant-info">
-        <h4>Snake Plant</h4>
-        <p class="price">$15.00</p>
-        <button class="add-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-
-    <div class="plant-card">
-      <img src="plant3.jpg" alt="Peace Lily" />
-      <div class="plant-info">
-        <h4>Peace Lily</h4>
-        <p class="price">$18.00</p>
-        <button class="add-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-
-    <div class="plant-card">
-      <img src="plant4.jpg" alt="Fiddle Leaf Fig" />
-      <div class="plant-info">
-        <h4>Fiddle Leaf Fig</h4>
-        <p class="price">$25.00</p>
-        <button class="add-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-
-    <div class="plant-card">
-      <img src="plant5.jpg" alt="Spider Plant" />
-      <div class="plant-info">
-        <h4>Spider Plant</h4>
-        <p class="price">$10.00</p>
-        <button class="add-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-
-    <div class="plant-card">
-      <img src="plant6.jpg" alt="Succulent Mix" />
-      <div class="plant-info">
-        <h4>Succulent Mix</h4>
-        <p class="price">$9.00</p>
-        <button class="add-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-
-    <div class="plant-card">
-      <img src="plant7.jpg" alt="Pothos" />
-      <div class="plant-info">
-        <h4>Pothos</h4>
-        <p class="price">$11.00</p>
-        <button class="add-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-
-    <div class="plant-card">
-      <img src="plant8.jpg" alt="ZZ Plant" />
-      <div class="plant-info">
-        <h4>ZZ Plant</h4>
-        <p class="price">$20.00</p>
-        <button class="add-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="plant-lover">
-  <div class="plant-lover-img">
-    <img src="plant-lover.jpg" alt="Plant Lover">
-  </div>
-  <div class="plant-lover-content">
-    <h2>Why Plant Lovers Love Us</h2>
-    <ul>
-      <li>Fast delivery</li>
-      <li>Top-quality plants</li>
-      <li>Eco packaging</li>
-    </ul>
+<!-- ✅ Updated Join Section -->
+<section class="join-section">
+  <div class="join-content">
+    <h2>Join the colorful Bunch</h2>
+    <form class="subscribe-form">
+      <input type="email" placeholder="Write your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
   </div>
 </section>
 
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-background">
+      <div class="footer-content">
+
+        <!-- Left -->
+        <div class="footer-left">
+          <img src="logo.png" alt="Lakuei Logo" class="footer-logo" />
+          <p>Indulge your senses with the beauty and fragrance of our fresh flower shop.</p>
+    
+        </div>
+
+        <!-- Center Links -->
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
