@@ -225,21 +225,19 @@
 
 .plant-lover {
   display: flex;
-  gap: 40px;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto 80px;
-  padding: 0 20px;
   flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .plant-lover-img {
-  position: relative; 
+  position: relative;
   flex: 1 1 300px;
-  max-width: 450px;
 }
 
-.plant-lover-img .main-img {
+.main-img {
   width: 100%;
   height: auto;
   display: block;
@@ -248,62 +246,34 @@
 
 .icon-overlay {
   position: absolute;
-  top: -75px;
-  right: -50px;   
-  width: 160px;
-  height: 160px;
-  object-fit: contain;
-  pointer-events: none;
+  top: -80px;
+  right: -60px;
+  width: 180px;
+  height: auto;
 }
 
 
+@media (max-width: 768px) {
+  .icon-overlay {
+    display: none;
+  }
+}
+
 .plant-lover-content {
-  flex: 1 1 400px;
+  flex: 1 1 300px;
+  max-width: 600px;
 }
 
 .pt {
   font-size: 32px;
-  font-weight: 700;
   margin-bottom: 20px;
-  color: #222;
 }
 
-.plant-lover-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.plant-lover-content ul li.hl {
-  color: #666;
+.hl {
   font-size: 16px;
-  line-height: 1.5;
+  color: #555;
   margin-bottom: 12px;
 }
-
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-  .plant-lover {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .plant-lover-img,
-  .plant-lover-content {
-    max-width: 100%;
-    flex: unset;
-  }
-
-  /* Center icon overlay top-right for smaller screens */
-  .icon-overlay {
-    top: 8px;
-    right: 8px;
-    width: 50px;
-    height: 50px;
-  }
-}
-
-
 
 .join-section {
   background: url('news-letter-bg.png') no-repeat center/cover;
@@ -328,17 +298,18 @@
 .subscribe-form {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; 
 }
 
 .subscribe-form input {
   padding: 12px 16px;
   border: none;
   border-radius: 4px;
-  width: 260px;
-  max-width: 100%;
   font-size: 1rem;
+  flex: 1;
+  min-width: 0;
 }
 
 .subscribe-form button {
@@ -349,19 +320,11 @@
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 
-@media (max-width: 600px) {
-  .subscribe-form {
-    flex-direction: column;
-  }
 
-  .subscribe-form input,
-  .subscribe-form button {
-    width: 100%;
-  }
-}
 
 .latest-deals {
   padding: 60px 20px;
@@ -372,6 +335,7 @@
 .latest-title {
   font-size: 32px;
   margin-bottom: 10px;
+  text-align: center; /* Always center the title */
 }
 
 .highlight {
@@ -385,6 +349,7 @@
   font-size: 15px;
   color: #666;
   line-height: 1.5;
+  text-align: left; /* subtitle left align on mobile */
 }
 
 .deal-grid {
@@ -425,7 +390,6 @@
   min-height: 380px;
 }
 
-
 .deal-info {
   position: absolute;
   top: 50%;
@@ -446,6 +410,7 @@
   margin-top: 5px;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   .deal-grid {
     grid-template-columns: 1fr;
@@ -459,12 +424,14 @@
     margin-top: 20px;
   }
 
-  .latest-title,
+  .latest-title {
+    text-align: center; 
+  }
+
   .latest-subtitle {
     text-align: left;
   }
 }
-
 
 .subscribe-section {
   background: url('news-letter-bg.png') center/cover no-repeat;
