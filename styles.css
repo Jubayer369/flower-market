@@ -44,6 +44,8 @@
   color: #000;
 }
 
+
+
 .cart {
   position: relative;
   cursor: pointer;
@@ -76,6 +78,9 @@
     gap: 12px;
   }
 }
+
+
+
 .banner {
   display: flex;
   align-items: center;
@@ -94,6 +99,10 @@
   width: 100%;
   max-width: 500px;
 }
+.highlight-orange {
+  color: #E95A08;
+  font-weight: bold;
+}
 
 @media (max-width: 768px) {
   .banner {
@@ -104,6 +113,9 @@
     width: 100%;
   }
 }
+
+
+
 .plants-section {
   padding: 60px 20px;
   background-color: #f4f4f4;
@@ -114,6 +126,10 @@
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.section-title .highlight {
+  color: #E95A08;
 }
 
 .section-subtitle {
@@ -132,7 +148,6 @@
 
 .plant-card {
   background: #fff;
-  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -146,39 +161,44 @@
 
 .plant-card img {
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
 }
 
 .plant-info {
   padding: 15px;
+  text-align: center;
 }
 
 .plant-info h4 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 5px;
+  color: #333;
 }
 
 .plant-info .price {
   font-size: 16px;
-  color: #4CAF50;
-  margin-bottom: 10px;
+  font-weight: bold;
+  color: rgb(119, 117, 117);
+  margin-bottom: 12px;
 }
 
 .add-cart-btn {
   padding: 10px 15px;
-  background-color: #3CA96E;
-  color: white;
+  background-color: #E95A08;
+  color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
 .add-cart-btn:hover {
-  background-color: #32895b;
+  background-color: #c74a06;
 }
+
 
 @media (max-width: 992px) {
   .plant-grid {
@@ -198,29 +218,95 @@
   }
 }
 
+
+
+
+
+
 .plant-lover {
   display: flex;
-  align-items: center;
   gap: 40px;
-  padding: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
   flex-wrap: wrap;
 }
+
 .plant-lover-img {
-  flex: 1;
-}
-.plant-lover-content {
-  flex: 1;
+  position: relative; 
+  flex: 1 1 300px;
+  max-width: 450px;
 }
 
+.plant-lover-img .main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: -75px;
+  right: -50px;   
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+.plant-lover-content {
+  flex: 1 1 400px;
+}
+
+.pt {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.plant-lover-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plant-lover-content ul li.hl {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* Responsive for smaller screens */
 @media (max-width: 768px) {
   .plant-lover {
     flex-direction: column;
-    text-align: left;
+    text-align: center;
+  }
+
+  .plant-lover-img,
+  .plant-lover-content {
+    max-width: 100%;
+    flex: unset;
+  }
+
+  /* Center icon overlay top-right for smaller screens */
+  .icon-overlay {
+    top: 8px;
+    right: 8px;
+    width: 50px;
+    height: 50px;
   }
 }
 
+
+
 .join-section {
-  background: url('join-bg.jpg') no-repeat center/cover;
+  background: url('news-letter-bg.png') no-repeat center/cover;
   padding: 80px 20px;
   text-align: center;
   display: flex;
@@ -265,7 +351,7 @@
   cursor: pointer;
 }
 
-/* ✅ Responsive */
+
 @media (max-width: 600px) {
   .subscribe-form {
     flex-direction: column;
@@ -287,10 +373,12 @@
   font-size: 32px;
   margin-bottom: 10px;
 }
+
 .highlight {
   color: #e95a08;
   font-weight: bold;
 }
+
 .latest-subtitle {
   max-width: 700px;
   margin: 0 auto 40px;
@@ -337,16 +425,19 @@
   min-height: 380px;
 }
 
+
 .deal-info {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
-  padding: 10px 15px;
-  border-radius: 6px;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 500;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  text-align: center;
 }
 
 .deal-info span {
@@ -374,8 +465,9 @@
   }
 }
 
+
 .subscribe-section {
-  background: url('flowers-bg.jpg') center/cover no-repeat;
+  background: url('news-letter-bg.png') center/cover no-repeat;
   padding: 60px 20px;
   text-align: center;
   color: white;
@@ -394,37 +486,123 @@
 }
 
 
-
-.footer {
-  background-color: #f9f9f9;
-  padding: 40px 20px;
-  color: #333;
+.footer-background {
+  background-color: #f5f5f5;
+  padding: 40px 0;
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
   gap: 40px;
-  max-width: 1200px;
-  margin: auto;
+  flex-wrap: wrap;
 }
 
+
 .footer-left {
-  display: flex;
-  flex-direction: column;
+  max-width: 300px;
+  text-align: left;
 }
 
 .footer-logo {
-  height: 40px;
-  margin-bottom: 10px;
+  width: 90px;
+  height: auto;
 }
 
 .footer-left p {
-  font-size: 14px;
-  line-height: 1.5;
   margin-top: 10px;
+  color: rgb(119, 117, 117);
+  line-height: 1.5;
+  font-size: 15px;
 }
+
 
 .footer-links {
   display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.link-column ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link-column ul li {
+  font-size: 15px;
+  color: rgb(119, 117, 117);
+}
+
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-links,
+  .footer-social {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .footer-links {
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .link-column ul {
+    align-items: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  .link-column ul li {
+    font-size: 15px;
+    color: rgb(119, 117, 117);
+  }
+
+  .footer-social {
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
